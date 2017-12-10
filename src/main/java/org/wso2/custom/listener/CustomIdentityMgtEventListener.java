@@ -46,7 +46,7 @@ public class CustomIdentityMgtEventListener extends AbstractIdentityUserOperatio
         }
 
 
-        //obtain userType from username and invoke validatePasswordPatterns
+        //invoke validatePasswordPatterns to enforce custom password policy.
         validatePasswordPatterns(userName, credential);
         return true;
     }
@@ -61,8 +61,7 @@ public class CustomIdentityMgtEventListener extends AbstractIdentityUserOperatio
             }
             return true;
         }
-
-        //obtain userType from username and invoke validatePasswordPatterns
+        //invoke validatePasswordPatterns to enforce custom password policy.
         validatePasswordPatterns(userName, newCredential);
         return true;
     }
@@ -78,7 +77,7 @@ public class CustomIdentityMgtEventListener extends AbstractIdentityUserOperatio
             return true;
         }
 
-        //obtain userType from username and invoke validatePasswordPatterns
+        //invoke validatePasswordPatterns to enforce custom password policy.
         validatePasswordPatterns(userName, newCredential);
         return true;
     }
